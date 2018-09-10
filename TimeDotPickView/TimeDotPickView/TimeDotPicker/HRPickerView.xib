@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HRPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCj-cp-Hwr">
+                    <rect key="frame" x="0.0" y="407" width="375" height="260"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QK9-ut-hRM">
+                            <rect key="frame" x="35" y="0.0" width="46" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="4Jd-Wz-XM6"/>
+                                <constraint firstAttribute="width" constant="46" id="irc-3q-OQb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ex-8R-OsM">
+                            <rect key="frame" x="294" y="0.0" width="46" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="Cmf-lP-mOY"/>
+                                <constraint firstAttribute="width" constant="46" id="RxX-va-1rN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWc-ZD-G2s">
+                            <rect key="frame" x="0.0" y="50" width="375" height="210"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </pickerView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85K-U4-OLW">
+                            <rect key="frame" x="0.0" y="49" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="QzP-df-Qmy"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HWc-ZD-G2s" secondAttribute="trailing" id="2c2-iN-1Hf"/>
+                        <constraint firstAttribute="trailing" secondItem="85K-U4-OLW" secondAttribute="trailing" id="JCA-3h-ehk"/>
+                        <constraint firstItem="5Ex-8R-OsM" firstAttribute="top" secondItem="bCj-cp-Hwr" secondAttribute="top" id="Ms6-vO-9W6"/>
+                        <constraint firstAttribute="height" constant="260" id="O4Z-1j-DWH"/>
+                        <constraint firstAttribute="trailing" secondItem="5Ex-8R-OsM" secondAttribute="trailing" constant="35" id="TCt-A6-dqg"/>
+                        <constraint firstItem="HWc-ZD-G2s" firstAttribute="top" secondItem="85K-U4-OLW" secondAttribute="bottom" id="Wfe-QA-gu3"/>
+                        <constraint firstItem="85K-U4-OLW" firstAttribute="leading" secondItem="bCj-cp-Hwr" secondAttribute="leading" id="Z8T-dl-IOX"/>
+                        <constraint firstItem="HWc-ZD-G2s" firstAttribute="leading" secondItem="bCj-cp-Hwr" secondAttribute="leading" id="bFp-G1-DhS"/>
+                        <constraint firstAttribute="bottom" secondItem="HWc-ZD-G2s" secondAttribute="bottom" id="cCO-RS-GOU"/>
+                        <constraint firstItem="QK9-ut-hRM" firstAttribute="leading" secondItem="bCj-cp-Hwr" secondAttribute="leading" constant="35" id="foP-BW-eJE"/>
+                        <constraint firstItem="QK9-ut-hRM" firstAttribute="top" secondItem="bCj-cp-Hwr" secondAttribute="top" id="sMl-J0-9EC"/>
+                        <constraint firstItem="85K-U4-OLW" firstAttribute="top" secondItem="QK9-ut-hRM" secondAttribute="bottom" id="wxt-vD-ISq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bCj-cp-Hwr" secondAttribute="bottom" id="A7T-wE-oRy"/>
+                <constraint firstItem="bCj-cp-Hwr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Al4-eN-dgy"/>
+                <constraint firstAttribute="trailing" secondItem="bCj-cp-Hwr" secondAttribute="trailing" id="Llx-X7-96g"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelBtn" destination="QK9-ut-hRM" id="diS-vM-3KY"/>
+                <outlet property="ensureBtn" destination="5Ex-8R-OsM" id="6cQ-zy-7Ux"/>
+                <outlet property="holderView" destination="bCj-cp-Hwr" id="nNT-EK-Bbj"/>
+                <outlet property="pickView" destination="HWc-ZD-G2s" id="0M6-LP-d7w"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
