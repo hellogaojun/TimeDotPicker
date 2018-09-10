@@ -23,14 +23,24 @@
 @property (nonatomic, copy) UIColor *(^pickerLineColor)(void);
 
 /**
- picker灰度文本
+ picker灰度文本颜色
  */
 @property (nonatomic, copy) UIColor *(^pickerUnhighlightedTextColor)(void);
 
 /**
- picker亮度文本
+ picker灰度文本字体
+ */
+@property (nonatomic, copy) UIFont *(^pickerUnhighlightedTextFont)(void);
+
+/**
+ picker亮度文本颜色
  */
 @property (nonatomic, copy) UIColor *(^pickerHighlightedTextLineColor)(void);
+
+/**
+ picker亮度文本字体
+ */
+@property (nonatomic, copy) UIFont  *(^pickerHighlightedTextLineFont)(void);
 
 /**
  快速初始化
@@ -46,9 +56,10 @@
  @param leftFont [取消]字号
  @param rightClor [确定]颜色
  @param rightFont [确定]字号
+ @param separateColor 分割线颜色
  */
 - (void)setupHeadStyleWithLeftColor:(UIColor *)leftColor
-                           leftFont:(UIFont *)leftFont rightColor:(UIColor *)rightClor rightFont:(UIFont *)rightFont;
+                           leftFont:(UIFont *)leftFont rightColor:(UIColor *)rightClor rightFont:(UIFont *)rightFont separateColor:(UIColor *)separateColor;
 
 /**
  设置冒号和中间横线颜色

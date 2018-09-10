@@ -18,12 +18,15 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickView;
 @property (nonatomic, strong) UIView *bottomView;
 @property (weak, nonatomic) IBOutlet UIView *holderView;
+@property (weak, nonatomic) IBOutlet UIView *separateLine;
 
 @property (nonatomic,strong) NSMutableArray *timeDotArray;
 @property (nonatomic,strong) NSMutableArray *emptyArray;
 @end
 
 @implementation HRPickerView
+
+#pragma mark - 设置UI
 
 //xib设置的 self.holderView总高度为260，pickView高度为210
 - (void)awakeFromNib {
@@ -41,7 +44,7 @@
     
 }
 
-#pragma mark - 设置UI
+
 ///设置中间View
 - (void)setupCenterView {
     CGFloat itemWidth = (APP_WIDTH - 10 -70 - 70 *2)/4.0;
@@ -66,7 +69,6 @@
     label0.textColor = RGBA(50, 50, 50, 1);
     label0.tag = 200;
     [self.bottomView addSubview:label0];
-    
     label0.centerX = self.bottomView.centerX;
     
     CGFloat rightPadding = 50;
@@ -90,11 +92,12 @@
     return pickView;
 }
 
-- (void)setupHeadStyleWithLeftColor:(UIColor *)leftColor leftFont:(UIFont *)leftFont rightColor:(UIColor *)rightClor rightFont:(UIFont *)rightFont {
+- (void)setupHeadStyleWithLeftColor:(UIColor *)leftColor leftFont:(UIFont *)leftFont rightColor:(UIColor *)rightClor rightFont:(UIFont *)rightFont separateColor:(UIColor *)separateColor {
     [self.cancelBtn setTitleColor:leftColor forState:UIControlStateNormal];
     self.cancelBtn.titleLabel.font = leftFont;
     [self.ensureBtn setTitleColor:rightClor forState:UIControlStateNormal];
     self.cancelBtn.titleLabel.font = rightFont;
+    self.separateLine.backgroundColor = separateColor;
 }
 
 - (void)setLineColor:(UIColor *)lineColor colonColor:(UIColor *)colonColor {
@@ -154,7 +157,7 @@
     myView.frame = CGRectMake(0.0f, 0.0f, width, rowheight);
     UILabel *txtlabel = [[UILabel alloc] init];
     txtlabel.textColor = self.pickerUnhighlightedTextColor ? self.pickerUnhighlightedTextColor() : RGBA(153, 153, 153, 1);
-    txtlabel.font = [UIFont systemFontOfSize:12];
+    txtlabel.font = self.pickerUnhighlightedTextFont ? self.pickerUnhighlightedTextFont() : [UIFont systemFontOfSize:12];
     txtlabel.textAlignment = NSTextAlignmentCenter;
     txtlabel.frame = myView.frame;
     txtlabel.text = [self pickerView:pickerView titleForRow:row forComponent:component];
@@ -171,7 +174,7 @@
             UIView *labelSuper = [cellview.subviews lastObject];
             UILabel *label = [labelSuper.subviews lastObject];
             label.textColor = self.pickerHighlightedTextLineColor ? self.pickerHighlightedTextLineColor() : RGBA(50, 50, 50, 1);
-            label.font = [UIFont systemFontOfSize:13];
+            label.font = self.pickerUnhighlightedTextFont ? self.pickerUnhighlightedTextFont() : [UIFont systemFontOfSize:13];
         }
     }
     

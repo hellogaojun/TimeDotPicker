@@ -30,18 +30,24 @@
     picker.tag = 100;
     picker.frame = CGRectMake(0, self.view.frame.size.height - 260, self.view.frame.size.width, 260);
     
-    //此处设置你自己的风格
+    //此处设置你自己的风格[根据需要自己选择]
 //    picker.pickerLineColor = ^UIColor *{
 //        return [UIColor redColor];
 //    };
 //    picker.pickerHighlightedTextLineColor = ^UIColor *{
 //        return [UIColor blueColor];
 //    };
+//    picker.pickerUnhighlightedTextFont = ^UIFont *{
+//        return [UIFont systemFontOfSize:25];
+//    };
 //    picker.pickerUnhighlightedTextColor = ^UIColor *{
 //        return [UIColor orangeColor];
 //    };
+//    picker.pickerHighlightedTextLineFont = ^UIFont *{
+//        return [UIFont systemFontOfSize:28];
+//    };
 //
-//    [picker setupHeadStyleWithLeftColor:[UIColor redColor] leftFont:[UIFont systemFontOfSize:13] rightColor:[UIColor blueColor] rightFont:[UIFont systemFontOfSize:16]];
+//    [picker setupHeadStyleWithLeftColor:[UIColor redColor] leftFont:[UIFont systemFontOfSize:13] rightColor:[UIColor blueColor] rightFont:[UIFont systemFontOfSize:16] separateColor:[UIColor greenColor]];
 //    [picker setLineColor:[UIColor grayColor] colonColor:[UIColor redColor]];
     picker.pickerEnsureBlock = ^(NSString *startHour, NSString *startMinute, NSString *endHour, NSString *endMinute) {
         NSLog(@"startHour:%@,startMinute:%@,endHour:%@,endMinute:%@",startHour,startMinute,endHour,endMinute);

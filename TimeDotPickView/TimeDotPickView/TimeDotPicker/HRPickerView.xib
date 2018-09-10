@@ -80,6 +80,7 @@
                 <outlet property="ensureBtn" destination="5Ex-8R-OsM" id="6cQ-zy-7Ux"/>
                 <outlet property="holderView" destination="bCj-cp-Hwr" id="nNT-EK-Bbj"/>
                 <outlet property="pickView" destination="HWc-ZD-G2s" id="0M6-LP-d7w"/>
+                <outlet property="separateLine" destination="85K-U4-OLW" id="ap8-97-b8g"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
